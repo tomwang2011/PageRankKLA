@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.chart.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pagerankdemofxml.RankingDisplayController">
+   <children>
+      <Label fx:id="label" layoutX="247.0" layoutY="23.0" text="Current Ranking" />
+      <Label layoutX="256.0" layoutY="58.0" text="Site" />
+      <Label layoutX="423.0" layoutY="58.0" text="Number of Links" />
+      <Line endX="400.0" layoutX="221.0" layoutY="89.0" startX="-100.0" />
+      <Label fx:id="rank1" layoutX="250.0" layoutY="100" text="Label" />
+      <Label fx:id="rank2" layoutX="250.0" layoutY="125" text="Label" />
+      <Label fx:id="rank3" layoutX="250.0" layoutY="150" text="Label" />
+      <Label fx:id="rank4" layoutX="250.0" layoutY="175" text="Label" />
+      <Label fx:id="rank5" layoutX="250.0" layoutY="200" text="Label" />
+      <Label fx:id="rank6" layoutX="250.0" layoutY="225" text="Label" />
+      <Label fx:id="rank7" layoutX="250.0" layoutY="250" text="Label" />
+      <Label fx:id="rank8" layoutX="250.0" layoutY="275" text="Label" />
+      <Label fx:id="rank9" layoutX="250.0" layoutY="300" text="Label" />
+      <Label fx:id="rank10" layoutX="250.0" layoutY="325" text="Label" />
+      <Label layoutX="70.0" layoutY="58.0" text="Rank" />
+      <Label layoutX="69.0" layoutY="100" text="1" />
+      <Label layoutX="69.0" layoutY="125" text="2" />
+      <Label layoutX="69.0" layoutY="150" text="3" />
+      <Label layoutX="69.0" layoutY="175" text="4" />
+      <Label layoutX="69.0" layoutY="200" text="5" />
+      <Label layoutX="69.0" layoutY="225" text="6" />
+      <Label layoutX="69.0" layoutY="250" text="7" />
+      <Label layoutX="69.0" layoutY="275" text="8" />
+      <Label layoutX="69.0" layoutY="300" text="9" />
+      <Label layoutX="69.0" layoutY="325" text="10" />
+   </children>
+</AnchorPane>

@@ -13,6 +13,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 /**
@@ -25,19 +26,28 @@ public class LinkSelectionPageController implements Initializable {
 	/**
 	 * Initializes the controller class.
 	 */
+
+	@FXML
+	private Label PageName;
+
 	@Override
 	public void initialize(URL url, ResourceBundle rb) {
 		// TODO
 	}
 
-	public void initData(Set<Page> pages) {
+	public void initData(Set<Page> pages, String pageName) {
 		_pages = pages;
+
+		_pageName = pageName;
+
+		PageName.setText(_pageName);
 	}
 
 	public void saveLinkAction() {
 
 	}
 
+	private String _pageName;
 	private Set<Page> _pages;
 
 	private Stage _stage;

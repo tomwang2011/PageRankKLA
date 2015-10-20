@@ -13,6 +13,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
 /**
@@ -25,12 +26,18 @@ public class AddLinkController implements Initializable {
 	/**
 	 * Initializes the controller class.
 	 */
+
+	@FXML
+	private Button applebtn;
+
 	@Override
 	public void initialize(URL url, ResourceBundle rb) {
 	}
 
 	public void initData(Set<Page> pages) {
 		_pages = pages;
+
+//		applebtn.setText("hello");
 	}
 
 	@FXML
@@ -43,7 +50,7 @@ public class AddLinkController implements Initializable {
 
 		LinkSelectionPageController controller = display.getController();
 
-		controller.initData(_pages);
+		controller.initData(_pages, "Apple");
 
 		controller.setPrevStage(_stage);
 

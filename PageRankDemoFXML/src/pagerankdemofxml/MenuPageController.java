@@ -59,7 +59,7 @@ public class MenuPageController implements Initializable {
 
 	@Override
 	public void initialize(URL url, ResourceBundle rb) {
-		String siteList[] = {"apple", "amazon", "google", "microsoft", "facebook", "adidas", "nike", "reebok", "puma", "newbalance"};
+		String siteList[] = {"Apple", "Amazon", "Google", "Microsoft", "Facebook", "Adidas", "Nike", "Reebok", "Puma", "Newbalance"};
 		
 		for(String site : siteList) {
 			Page page = new Page(site);

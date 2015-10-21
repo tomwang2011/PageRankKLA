@@ -6,7 +6,10 @@
 package pagerankdemofxml;
 
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
 import java.util.ResourceBundle;
 import java.util.Set;
 import javafx.fxml.FXML;
@@ -30,16 +33,19 @@ public class RankingDisplayController implements Initializable {
 	public void initialize(URL url, ResourceBundle rb) {
 
 	}
-	
-	public void initData(Set<Page> pages) {
+
+	public void initData(Map<String,Page> pages) {
 		_pages = pages;
-		
+
 		label.setText("Here are the rankings!");
 		String[] rank = new String[10];
-		Iterator<Page> it = pages.iterator();
+		List<Page> pageList = new ArrayList<>();
+
+		for(Map.Entry<String,Page> entry : _pages.entrySet()) {
+			pageList.add(entry.getValue());
+		}
 		for(int i = 0; i < 10; i++) {
-			Page page = it.next();
-			rank[i] = page.getName();
+			rank[i] = pageList.get(i).getName();
 		}
 		rank1.setText(rank[0]);
 		rank2.setText(rank[1]);
@@ -52,10 +58,9 @@ public class RankingDisplayController implements Initializable {
 		rank9.setText(rank[8]);
 		rank10.setText(rank[9]);
 	}
-	private Set<Page> _pages;
-	
+	private Map<String,Page> _pages;
 	Stage _stage;
-	
+
 	public void setPrevStage(Stage stage) {
 		this._stage = stage;
 	}

@@ -6,7 +6,9 @@
 package pagerankdemofxml;
 
 import java.net.URL;
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.ResourceBundle;
 import java.util.Set;
 import javafx.event.ActionEvent;
@@ -23,59 +25,56 @@ import javafx.stage.Stage;
  * @author tom
  */
 public class FXMLDocumentController implements Initializable {
-	
+
 	@FXML
 	private Label label;
-	
+
 	@FXML
 	private TextField textFieldLink;
-	
+
 	@FXML
 	private void displayRankings(ActionEvent event) throws Exception {
 		FXMLLoader display = new FXMLLoader(getClass().getResource("RankingDisplay.fxml"));
-		
+
 		Scene scene = new Scene(display.load());
-		
+
 		_stage.setScene(scene);
-		
+
 		RankingDisplayController controller = display.getController();
-		
+
 		controller.initData(_pages);
-		
+
 		_stage.show();
 	}
-	
+
 	@FXML
 	private void buttonActionApple(ActionEvent event) {
-		System.out.println("Apple!");
-		Page page = new Page("apple");
-		_pages.add(page);
-		label.setText("Apple Added to set!");
+
 	}
-	
+
 	@FXML
 	private void buttonActionAdd(ActionEvent event) throws Exception{
 		FXMLLoader display = new FXMLLoader(getClass().getResource("MenuPage.fxml"));
-		
+
 		Scene scene = new Scene(display.load());
-		
+
 		_stage.setScene(scene);
-		
+
 		MenuPageController controller = display.getController();
-		
+
 		controller.setPrevStage(_stage);
-		
+
 		_stage.show();
 	}
-	
+
 	@Override
 	public void initialize(URL url, ResourceBundle rb) {
 	}
-	
-	private Set<Page> _pages = new HashSet<>();
-	
+
+	private Map<String, Page> _pages = new HashMap<>();
+
 	private Stage _stage;
-	
+
 	public void setPrevStage(Stage stage) {
 		this._stage = stage;
 	}

@@ -6,6 +6,7 @@
 package pagerankdemofxml;
 
 import java.net.URL;
+import java.util.Map;
 import java.util.ResourceBundle;
 import java.util.Set;
 import javafx.event.ActionEvent;
@@ -34,7 +35,7 @@ public class AddLinkController implements Initializable {
 	public void initialize(URL url, ResourceBundle rb) {
 	}
 
-	public void initData(Set<Page> pages) {
+	public void initData(Map<String, Page> pages) {
 		_pages = pages;
 
 //		applebtn.setText("hello");
@@ -71,7 +72,7 @@ public class AddLinkController implements Initializable {
 
 		_stage.show();
 	}
-	private Set<Page> _pages;
+	private Map<String,Page> _pages;
 
 	Stage _stage;
 

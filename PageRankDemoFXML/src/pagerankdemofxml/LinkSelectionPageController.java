@@ -6,6 +6,7 @@
 package pagerankdemofxml;
 
 import java.net.URL;
+import java.util.Map;
 import java.util.ResourceBundle;
 import java.util.Set;
 import javafx.event.ActionEvent;
@@ -13,6 +14,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
@@ -30,12 +32,17 @@ public class LinkSelectionPageController implements Initializable {
 	@FXML
 	private Label PageName;
 
+	@FXML
+	private CheckBox ch1,ch2,ch3,ch4,ch5,ch6,ch7,ch8,ch9,ch10;
+
+
+
 	@Override
 	public void initialize(URL url, ResourceBundle rb) {
 		// TODO
 	}
 
-	public void initData(Set<Page> pages, String pageName) {
+	public void initData(Map<String,Page> pages, String pageName) {
 		_pages = pages;
 
 		_pageName = pageName;
@@ -48,8 +55,7 @@ public class LinkSelectionPageController implements Initializable {
 	}
 
 	private String _pageName;
-	private Set<Page> _pages;
-
+	private Map<String,Page> _pages;
 	private Stage _stage;
 
 	public void setPrevStage(Stage stage) {

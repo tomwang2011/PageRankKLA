@@ -6,7 +6,9 @@
 package pagerankdemofxml;
 
 import java.net.URL;
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.ResourceBundle;
 import java.util.Set;
 import javafx.event.ActionEvent;
@@ -26,51 +28,51 @@ public class MenuPageController implements Initializable {
 	@FXML
 	private void addPageButtonEvent(ActionEvent event) throws Exception {
 		FXMLLoader display = new FXMLLoader(getClass().getResource("AddLink.fxml"));
-		
+
 		Scene scene = new Scene(display.load());
-		
+
 		_stage.setScene(scene);
-		
+
 		AddLinkController controller = display.getController();
-		
+
 		controller.initData(_pages);
-		
+
 		controller.setPrevStage(_stage);
-		
+
 		_stage.show();
 	}
-	
+
 	@FXML
 	private void viewRankingsButtonEvent(ActionEvent event) throws Exception {
 		FXMLLoader display = new FXMLLoader(getClass().getResource("RankingDisplay.fxml"));
-		
+
 		Scene scene = new Scene(display.load());
-		
+
 		_stage.setScene(scene);
-		
+
 		RankingDisplayController controller = display.getController();
-		
+
 		controller.initData(_pages);
-		
+
 		controller.setPrevStage(_stage);
-		
+
 		_stage.show();
 	}
 
 	@Override
 	public void initialize(URL url, ResourceBundle rb) {
 		String siteList[] = {"Apple", "Amazon", "Google", "Microsoft", "Facebook", "Adidas", "Nike", "Reebok", "Puma", "Newbalance"};
-		
-		for(String site : siteList) {
+
+		for (String site : siteList) {
 			Page page = new Page(site);
-			
-			_pages.add(page);
+
+			_pages.put(site, page);
 		}
-	}	
-	private Set<Page> _pages = new HashSet<>();
-	
+	}
+	private Map<String,Page> _pages = new HashMap<>();
+
 	Stage _stage;
-	
+
 	public void setPrevStage(Stage stage) {
 		this._stage = stage;
 	}

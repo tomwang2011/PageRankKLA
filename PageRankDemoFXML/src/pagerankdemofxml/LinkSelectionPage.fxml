@@ -12,5 +12,15 @@
       <Button fx:id="menuButton" layoutX="484.0" layoutY="30.0" mnemonicParsing="false" onAction="#ReturnToMenu" text="Back to Menu" />
       <Text layoutX="44.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Link to: " />
       <Label fx:id="PageName" layoutX="141.0" layoutY="23.0" text="Label" />
+      <CheckBox fx:id="ch1" layoutX="40.0" layoutY="78.0" mnemonicParsing="false" text="Apple" />
+      <CheckBox fx:id="ch2" layoutX="40.0" layoutY="106.0" mnemonicParsing="false" text="Amazon" />
+      <CheckBox fx:id="ch3" layoutX="40.0" layoutY="132.0" mnemonicParsing="false" text="Google" />
+      <CheckBox fx:id="ch4" layoutX="40.0" layoutY="163.0" mnemonicParsing="false" text="Microsoft" />
+      <CheckBox fx:id="ch5" layoutX="39.0" layoutY="191.0" mnemonicParsing="false" text="Facebook" />
+      <CheckBox fx:id="ch6" layoutX="202.0" layoutY="78.0" mnemonicParsing="false" text="Adidas" />
+      <CheckBox fx:id="ch7" layoutX="202.0" layoutY="106.0" mnemonicParsing="false" text="Nike" />
+      <CheckBox fx:id="ch8" layoutX="202.0" layoutY="132.0" mnemonicParsing="false" text="Reebok" />
+      <CheckBox fx:id="ch9" layoutX="202.0" layoutY="163.0" mnemonicParsing="false" text="Puma" />
+      <CheckBox fx:id="ch10" layoutX="202.0" layoutY="191.0" mnemonicParsing="false" text="New Balance" />
    </children>
 </AnchorPane>

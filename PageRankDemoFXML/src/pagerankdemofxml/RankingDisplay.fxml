@@ -35,5 +35,6 @@
       <Label layoutX="69.0" layoutY="275" text="8" />
       <Label layoutX="69.0" layoutY="300" text="9" />
       <Label layoutX="69.0" layoutY="325" text="10" />
+      <Button fx:id="menu" layoutX="540.0" layoutY="18.0" mnemonicParsing="false" onAction="#ReturnToMenu" text="Return to Menu" />
    </children>
 </AnchorPane>

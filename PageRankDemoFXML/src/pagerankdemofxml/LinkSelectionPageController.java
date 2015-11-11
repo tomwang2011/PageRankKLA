@@ -43,26 +43,52 @@ public class LinkSelectionPageController implements Initializable {
 		// TODO
 	}
 
-	public void initData(Map<String, Page> pages, String pageName) {
-		_pages = pages;
-
+	public void initData(String pageName) {
 		_pageName = pageName;
 
 		PageName.setText(_pageName);
 	}
 
-	public void saveLinkAction() {
+	@FXML
+	public void saveLinkAction(ActionEvent event) throws Exception {
+		Map<String, Page> pageMap = Pages.getMap();
+		
 		String[] list = Pages.getSiteList();
+		
 		if (ch1.isSelected()) {
-			Page page = _pages.get(_pageName);
-			
-			page.addLink(_pages.get(list[0]));
-			
-			_pages.put(_pageName, page);
+			Pages.addPage(_pageName, pageMap.get(list[0]));
 		}
+		if (ch2.isSelected()) {
+			Pages.addPage(_pageName, pageMap.get(list[1]));
+		}
+		if (ch3.isSelected()) {
+			Pages.addPage(_pageName, pageMap.get(list[2]));
+		}
+		if (ch4.isSelected()) {
+			Pages.addPage(_pageName, pageMap.get(list[3]));
+		}
+		if (ch5.isSelected()) {
+			Pages.addPage(_pageName, pageMap.get(list[4]));
+		}
+		if (ch6.isSelected()) {
+			Pages.addPage(_pageName, pageMap.get(list[5]));
+		}
+		if (ch7.isSelected()) {
+			Pages.addPage(_pageName, pageMap.get(list[6]));
+		}
+		if (ch8.isSelected()) {
+			Pages.addPage(_pageName, pageMap.get(list[7]));
+		}
+		if (ch9.isSelected()) {
+			Pages.addPage(_pageName, pageMap.get(list[8]));
+		}
+		if (ch10.isSelected()) {
+			Pages.addPage(_pageName, pageMap.get(list[9]));
+		}
+		
+		returnToAddLink(event);
 	}
 
-	private Map<String, Page> _pages;
 	private String _pageName;
 	private Stage _stage;
 
@@ -70,6 +96,22 @@ public class LinkSelectionPageController implements Initializable {
 		this._stage = stage;
 	}
 
+	@FXML
+	private void returnToAddLink(ActionEvent event) throws Exception {
+		FXMLLoader display = new FXMLLoader(getClass().getResource("AddLink.fxml"));
+
+		Scene scene = new Scene(display.load());
+
+		_stage.setScene(scene);
+
+		AddLinkController controller = display.getController();
+
+		controller.initData();
+
+		controller.setPrevStage(_stage);
+
+		_stage.show();
+	}
 	@FXML
 	private void ReturnToMenu(ActionEvent event) throws Exception {
 		FXMLLoader display = new FXMLLoader(getClass().getResource("MenuPage.fxml"));
@@ -81,8 +123,6 @@ public class LinkSelectionPageController implements Initializable {
 		MenuPageController controller = display.getController();
 
 		controller.setPrevStage(_stage);
-		
-		
 
 		_stage.show();
 	}

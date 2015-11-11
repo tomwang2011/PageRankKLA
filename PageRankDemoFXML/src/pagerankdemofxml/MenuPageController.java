@@ -6,10 +6,7 @@
 package pagerankdemofxml;
 
 import java.net.URL;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.ResourceBundle;
-import java.util.Set;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -34,7 +31,7 @@ public class MenuPageController implements Initializable {
 
 		AddLinkController controller = display.getController();
 
-		controller.initData(_pages);
+		controller.initData();
 
 		controller.setPrevStage(_stage);
 
@@ -51,7 +48,7 @@ public class MenuPageController implements Initializable {
 
 		RankingDisplayController controller = display.getController();
 
-		controller.initData(_pages);
+		controller.initData();
 
 		controller.setPrevStage(_stage);
 
@@ -60,16 +57,8 @@ public class MenuPageController implements Initializable {
 
 	@Override
 	public void initialize(URL url, ResourceBundle rb) {
-		_pages = new HashMap<>();
-
-		for (String site : Pages.getSiteList()) {
-			Page page = new Page(site);
-
-			_pages.put(site, page);
-		}
 	}
 
-	Map<String, Page> _pages;
 	Stage _stage;
 
 	public void setPrevStage(Stage stage) {

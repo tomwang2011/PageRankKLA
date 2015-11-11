@@ -35,12 +35,11 @@ public class AddLinkController implements Initializable {
 	public void initialize(URL url, ResourceBundle rb) {
 	}
 
-	public void initData(Map<String, Page> pages) {
-		_pages = pages;
+	public void initData() {
 	}
 
 	@FXML
-	private void AddLinkToApple(ActionEvent event) throws Exception {
+	private void AddLinkTo0(ActionEvent event) throws Exception {
 		FXMLLoader display = new FXMLLoader(getClass().getResource("LinkSelectionPage.fxml"));
 
 		Scene scene = new Scene(display.load());
@@ -51,7 +50,178 @@ public class AddLinkController implements Initializable {
 
 		String[] list = Pages.getSiteList();
 
-		controller.initData(_pages, list[0]);
+		controller.initData(list[0]);
+
+		controller.setPrevStage(_stage);
+
+		_stage.show();
+	}
+	
+	@FXML
+	private void AddLinkTo1(ActionEvent event) throws Exception {
+		FXMLLoader display = new FXMLLoader(getClass().getResource("LinkSelectionPage.fxml"));
+
+		Scene scene = new Scene(display.load());
+
+		_stage.setScene(scene);
+
+		LinkSelectionPageController controller = display.getController();
+
+		String[] list = Pages.getSiteList();
+
+		controller.initData(list[1]);
+
+		controller.setPrevStage(_stage);
+
+		_stage.show();
+	}
+	
+	@FXML
+	private void AddLinkTo2(ActionEvent event) throws Exception {
+		FXMLLoader display = new FXMLLoader(getClass().getResource("LinkSelectionPage.fxml"));
+
+		Scene scene = new Scene(display.load());
+
+		_stage.setScene(scene);
+
+		LinkSelectionPageController controller = display.getController();
+
+		String[] list = Pages.getSiteList();
+
+		controller.initData(list[2]);
+
+		controller.setPrevStage(_stage);
+
+		_stage.show();
+	}
+	
+	@FXML
+	private void AddLinkTo3(ActionEvent event) throws Exception {
+		FXMLLoader display = new FXMLLoader(getClass().getResource("LinkSelectionPage.fxml"));
+
+		Scene scene = new Scene(display.load());
+
+		_stage.setScene(scene);
+
+		LinkSelectionPageController controller = display.getController();
+
+		String[] list = Pages.getSiteList();
+
+		controller.initData(list[3]);
+
+		controller.setPrevStage(_stage);
+
+		_stage.show();
+	}
+	
+	@FXML
+	private void AddLinkTo4(ActionEvent event) throws Exception {
+		FXMLLoader display = new FXMLLoader(getClass().getResource("LinkSelectionPage.fxml"));
+
+		Scene scene = new Scene(display.load());
+
+		_stage.setScene(scene);
+
+		LinkSelectionPageController controller = display.getController();
+
+		String[] list = Pages.getSiteList();
+
+		controller.initData(list[4]);
+
+		controller.setPrevStage(_stage);
+
+		_stage.show();
+	}
+	
+	@FXML
+	private void AddLinkTo5(ActionEvent event) throws Exception {
+		FXMLLoader display = new FXMLLoader(getClass().getResource("LinkSelectionPage.fxml"));
+
+		Scene scene = new Scene(display.load());
+
+		_stage.setScene(scene);
+
+		LinkSelectionPageController controller = display.getController();
+
+		String[] list = Pages.getSiteList();
+
+		controller.initData(list[5]);
+
+		controller.setPrevStage(_stage);
+
+		_stage.show();
+	}
+	
+	@FXML
+	private void AddLinkTo6(ActionEvent event) throws Exception {
+		FXMLLoader display = new FXMLLoader(getClass().getResource("LinkSelectionPage.fxml"));
+
+		Scene scene = new Scene(display.load());
+
+		_stage.setScene(scene);
+
+		LinkSelectionPageController controller = display.getController();
+
+		String[] list = Pages.getSiteList();
+
+		controller.initData(list[6]);
+
+		controller.setPrevStage(_stage);
+
+		_stage.show();
+	}
+	
+	@FXML
+	private void AddLinkTo7(ActionEvent event) throws Exception {
+		FXMLLoader display = new FXMLLoader(getClass().getResource("LinkSelectionPage.fxml"));
+
+		Scene scene = new Scene(display.load());
+
+		_stage.setScene(scene);
+
+		LinkSelectionPageController controller = display.getController();
+
+		String[] list = Pages.getSiteList();
+
+		controller.initData(list[7]);
+
+		controller.setPrevStage(_stage);
+
+		_stage.show();
+	}
+	
+	@FXML
+	private void AddLinkTo8(ActionEvent event) throws Exception {
+		FXMLLoader display = new FXMLLoader(getClass().getResource("LinkSelectionPage.fxml"));
+
+		Scene scene = new Scene(display.load());
+
+		_stage.setScene(scene);
+
+		LinkSelectionPageController controller = display.getController();
+
+		String[] list = Pages.getSiteList();
+
+		controller.initData(list[8]);
+
+		controller.setPrevStage(_stage);
+
+		_stage.show();
+	}
+	
+	@FXML
+	private void AddLinkTo9(ActionEvent event) throws Exception {
+		FXMLLoader display = new FXMLLoader(getClass().getResource("LinkSelectionPage.fxml"));
+
+		Scene scene = new Scene(display.load());
+
+		_stage.setScene(scene);
+
+		LinkSelectionPageController controller = display.getController();
+
+		String[] list = Pages.getSiteList();
+
+		controller.initData(list[9]);
 
 		controller.setPrevStage(_stage);
 
@@ -73,7 +243,7 @@ public class AddLinkController implements Initializable {
 		_stage.show();
 	}
 
-	Map<String, Page> _pages;
+	Pages _pages;
 	Stage _stage;
 
 	public void setPrevStage(Stage stage) {

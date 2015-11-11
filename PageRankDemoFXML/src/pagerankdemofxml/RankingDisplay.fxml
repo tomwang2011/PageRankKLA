@@ -36,5 +36,15 @@
       <Label layoutX="69.0" layoutY="300" text="9" />
       <Label layoutX="69.0" layoutY="325" text="10" />
       <Button fx:id="menu" layoutX="540.0" layoutY="18.0" mnemonicParsing="false" onAction="#ReturnToMenu" text="Return to Menu" />
+      <Label fx:id="linknum1" layoutX="457.0" layoutY="100.0" text="Label" />
+      <Label fx:id="linknum2" layoutX="457.0" layoutY="125.0" text="Label" />
+      <Label fx:id="linknum3" layoutX="457.0" layoutY="150.0" text="Label" />
+      <Label fx:id="linknum4" layoutX="457.0" layoutY="175.0" text="Label" />
+      <Label fx:id="linknum5" layoutX="457.0" layoutY="200.0" text="Label" />
+      <Label fx:id="linknum6" layoutX="457.0" layoutY="225.0" text="Label" />
+      <Label fx:id="linknum7" layoutX="457.0" layoutY="250.0" text="Label" />
+      <Label fx:id="linknum8" layoutX="457.0" layoutY="275.0" text="Label" />
+      <Label fx:id="linknum9" layoutX="457.0" layoutY="300.0" text="Label" />
+      <Label fx:id="linknum10" layoutX="457.0" layoutY="325.0" text="Label" />
    </children>
 </AnchorPane>

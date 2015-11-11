@@ -33,21 +33,6 @@ public class FXMLDocumentController implements Initializable {
 	private TextField textFieldLink;
 
 	@FXML
-	private void displayRankings(ActionEvent event) throws Exception {
-		FXMLLoader display = new FXMLLoader(getClass().getResource("RankingDisplay.fxml"));
-
-		Scene scene = new Scene(display.load());
-
-		_stage.setScene(scene);
-
-		RankingDisplayController controller = display.getController();
-
-		controller.initData(_pages);
-
-		_stage.show();
-	}
-
-	@FXML
 	private void buttonActionApple(ActionEvent event) {
 
 	}

@@ -6,6 +6,7 @@
 package pagerankdemofxml;
 
 import java.net.URL;
+import java.util.HashSet;
 import java.util.Map;
 import java.util.ResourceBundle;
 import java.util.Set;
@@ -42,7 +43,7 @@ public class LinkSelectionPageController implements Initializable {
 		// TODO
 	}
 
-	public void initData(Map<String,Page> pages, String pageName) {
+	public void initData(Map<String, Page> pages, String pageName) {
 		_pages = pages;
 
 		_pageName = pageName;
@@ -51,11 +52,18 @@ public class LinkSelectionPageController implements Initializable {
 	}
 
 	public void saveLinkAction() {
-
+		String[] list = Pages.getSiteList();
+		if (ch1.isSelected()) {
+			Page page = _pages.get(_pageName);
+			
+			page.addLink(_pages.get(list[0]));
+			
+			_pages.put(_pageName, page);
+		}
 	}
 
+	private Map<String, Page> _pages;
 	private String _pageName;
-	private Map<String,Page> _pages;
 	private Stage _stage;
 
 	public void setPrevStage(Stage stage) {
@@ -73,6 +81,8 @@ public class LinkSelectionPageController implements Initializable {
 		MenuPageController controller = display.getController();
 
 		controller.setPrevStage(_stage);
+		
+		
 
 		_stage.show();
 	}

@@ -7,7 +7,6 @@ package pagerankdemofxml;
 
 import java.net.URL;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Map;
 import java.util.ResourceBundle;
 import java.util.Set;
@@ -61,16 +60,16 @@ public class MenuPageController implements Initializable {
 
 	@Override
 	public void initialize(URL url, ResourceBundle rb) {
-		String siteList[] = {"Apple", "Amazon", "Google", "Microsoft", "Facebook", "Adidas", "Nike", "Reebok", "Puma", "Newbalance"};
+		_pages = new HashMap<>();
 
-		for (String site : siteList) {
+		for (String site : Pages.getSiteList()) {
 			Page page = new Page(site);
 
 			_pages.put(site, page);
 		}
 	}
-	private Map<String,Page> _pages = new HashMap<>();
 
+	Map<String, Page> _pages;
 	Stage _stage;
 
 	public void setPrevStage(Stage stage) {

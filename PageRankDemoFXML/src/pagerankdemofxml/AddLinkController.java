@@ -37,8 +37,6 @@ public class AddLinkController implements Initializable {
 
 	public void initData(Map<String, Page> pages) {
 		_pages = pages;
-
-//		applebtn.setText("hello");
 	}
 
 	@FXML
@@ -51,7 +49,9 @@ public class AddLinkController implements Initializable {
 
 		LinkSelectionPageController controller = display.getController();
 
-		controller.initData(_pages, "Apple");
+		String[] list = Pages.getSiteList();
+
+		controller.initData(_pages, list[0]);
 
 		controller.setPrevStage(_stage);
 
@@ -72,8 +72,8 @@ public class AddLinkController implements Initializable {
 
 		_stage.show();
 	}
-	private Map<String,Page> _pages;
 
+	Map<String, Page> _pages;
 	Stage _stage;
 
 	public void setPrevStage(Stage stage) {

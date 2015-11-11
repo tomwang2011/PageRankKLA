@@ -17,15 +17,20 @@ public class Page {
 		_name = name;
 		_links = new HashSet<>();
 	}
-	public void addLink(String link) {
-		_links.add(link);
+
+	public void setLinks(Set<Page> _links) {
+		this._links = _links;
 	}
-	public Set<String> getLinks() {
+
+	public void addLink(Page page) {
+		_links.add(page);
+	}
+	public Set<Page> getLinks() {
 		return _links;
 	}
 	public String getName() {
 		return _name;
 	}
 	private String _name;
-	private Set<String> _links;
+	private Set<Page> _links;
 }

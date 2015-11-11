@@ -22,5 +22,6 @@
       <CheckBox fx:id="ch8" layoutX="202.0" layoutY="132.0" mnemonicParsing="false" text="Reebok" />
       <CheckBox fx:id="ch9" layoutX="202.0" layoutY="163.0" mnemonicParsing="false" text="Puma" />
       <CheckBox fx:id="ch10" layoutX="202.0" layoutY="191.0" mnemonicParsing="false" text="New Balance" />
+      <Button fx:id="savebtn" layoutX="324.0" layoutY="275.0" mnemonicParsing="false" onAction="#saveLinkAction" text="Save Links" />
    </children>
 </AnchorPane>

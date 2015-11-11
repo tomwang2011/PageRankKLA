@@ -15,19 +15,19 @@ import javafx.stage.Stage;
  * @author tom
  */
 public class PageRankDemoFXML extends Application {
-	
+
 	@Override
 	public void start(Stage stage) throws Exception {
 		FXMLLoader display = new FXMLLoader(getClass().getResource("MenuPage.fxml"));
-		
+
 		Scene scene = new Scene(display.load());
-		
+
 		stage.setScene(scene);
-		
+
 		MenuPageController controller = display.getController();
-		
+
 		controller.setPrevStage(stage);
-		
+
 		stage.show();
 	}
 
@@ -39,5 +39,5 @@ public class PageRankDemoFXML extends Application {
 
 		launch(args);
 	}
-	
+
 }

@@ -56,7 +56,7 @@ public class AddLinkController implements Initializable {
 
 		_stage.show();
 	}
-	
+
 	@FXML
 	private void AddLinkTo1(ActionEvent event) throws Exception {
 		FXMLLoader display = new FXMLLoader(getClass().getResource("LinkSelectionPage.fxml"));
@@ -75,7 +75,7 @@ public class AddLinkController implements Initializable {
 
 		_stage.show();
 	}
-	
+
 	@FXML
 	private void AddLinkTo2(ActionEvent event) throws Exception {
 		FXMLLoader display = new FXMLLoader(getClass().getResource("LinkSelectionPage.fxml"));
@@ -94,7 +94,7 @@ public class AddLinkController implements Initializable {
 
 		_stage.show();
 	}
-	
+
 	@FXML
 	private void AddLinkTo3(ActionEvent event) throws Exception {
 		FXMLLoader display = new FXMLLoader(getClass().getResource("LinkSelectionPage.fxml"));
@@ -113,7 +113,7 @@ public class AddLinkController implements Initializable {
 
 		_stage.show();
 	}
-	
+
 	@FXML
 	private void AddLinkTo4(ActionEvent event) throws Exception {
 		FXMLLoader display = new FXMLLoader(getClass().getResource("LinkSelectionPage.fxml"));
@@ -132,7 +132,7 @@ public class AddLinkController implements Initializable {
 
 		_stage.show();
 	}
-	
+
 	@FXML
 	private void AddLinkTo5(ActionEvent event) throws Exception {
 		FXMLLoader display = new FXMLLoader(getClass().getResource("LinkSelectionPage.fxml"));
@@ -151,7 +151,7 @@ public class AddLinkController implements Initializable {
 
 		_stage.show();
 	}
-	
+
 	@FXML
 	private void AddLinkTo6(ActionEvent event) throws Exception {
 		FXMLLoader display = new FXMLLoader(getClass().getResource("LinkSelectionPage.fxml"));
@@ -170,7 +170,7 @@ public class AddLinkController implements Initializable {
 
 		_stage.show();
 	}
-	
+
 	@FXML
 	private void AddLinkTo7(ActionEvent event) throws Exception {
 		FXMLLoader display = new FXMLLoader(getClass().getResource("LinkSelectionPage.fxml"));
@@ -189,7 +189,7 @@ public class AddLinkController implements Initializable {
 
 		_stage.show();
 	}
-	
+
 	@FXML
 	private void AddLinkTo8(ActionEvent event) throws Exception {
 		FXMLLoader display = new FXMLLoader(getClass().getResource("LinkSelectionPage.fxml"));
@@ -208,7 +208,7 @@ public class AddLinkController implements Initializable {
 
 		_stage.show();
 	}
-	
+
 	@FXML
 	private void AddLinkTo9(ActionEvent event) throws Exception {
 		FXMLLoader display = new FXMLLoader(getClass().getResource("LinkSelectionPage.fxml"));

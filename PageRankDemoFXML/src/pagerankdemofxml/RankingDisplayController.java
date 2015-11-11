@@ -5,12 +5,15 @@
  */
 package pagerankdemofxml;
 
-import pagerankdemofxml.Pages;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.ResourceBundle;
+import java.util.Set;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -49,16 +52,34 @@ public class RankingDisplayController implements Initializable {
 
 		List<Page> pageList = new ArrayList<>();
 
+		Map<String, Integer> nameKey = new HashMap<>();
+
+		int j = 0;
+
+		for (String name : Pages.getSiteList()) {
+			nameKey.put(name, j);
+			j++;
+		}
+
 		for (Page page : pages.values()) {
-			System.out.println(page.getName());
-			System.out.println(page.getLinks().size());
-			pageList.add(page);
+			Set<Page> pageLinks = page.getLinks();
+
+			for (Page link : pageLinks) {
+				pages.get(link.getName()).setIncomingLinks(page);
+			}
+		}
+
+		Set<Page> addedSites = new HashSet<>();
+
+		for(int k = 0; k < 10; k++) {
+			pageList.add(getMax(addedSites));
 		}
 
 		for(int i = 0; i < 10; i++) {
 			rank[i] = pageList.get(i).getName();
-			num[i] = String.valueOf(pageList.get(i).getLinks().size());
+			num[i] = String.valueOf(pageList.get(i).getIncomingLinks().size());
 		}
+
 		rank1.setText(rank[0]);
 		rank2.setText(rank[1]);
 		rank3.setText(rank[2]);
@@ -83,10 +104,41 @@ public class RankingDisplayController implements Initializable {
 
 	Stage _stage;
 
+	public Page getMax(Set<Page> addedSites) {
+		Map<String, Page> sites = Pages.getMap();
+
+		Page[] pageList = new Page[10];
+
+		int i = 0;
+		for (Page page : sites.values()) {
+			pageList[i] = page;
+			i++;
+		}
+
+		Page max = pageList[0];
+
+		int j = 1;
+
+		while (addedSites.contains(max)) {
+			max = pageList[j];
+			j++;
+		}
+
+		for (Page page : pageList) {
+			if (!addedSites.contains(page)) {
+				if(page.getIncomingLinks().size() > max.getIncomingLinks().size()) {
+					max = page;
+				}
+			}
+		}
+		addedSites.add(max);
+
+		return max;
+	}
 	public void setPrevStage(Stage stage) {
 		this._stage = stage;
 	}
-	
+
 	@FXML
 	private void ReturnToMenu(ActionEvent event) throws Exception {
 		FXMLLoader display = new FXMLLoader(getClass().getResource("MenuPage.fxml"));

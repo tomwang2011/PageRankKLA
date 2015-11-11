@@ -6,10 +6,8 @@
 package pagerankdemofxml;
 
 import java.net.URL;
-import java.util.HashSet;
 import java.util.Map;
 import java.util.ResourceBundle;
-import java.util.Set;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -52,9 +50,9 @@ public class LinkSelectionPageController implements Initializable {
 	@FXML
 	public void saveLinkAction(ActionEvent event) throws Exception {
 		Map<String, Page> pageMap = Pages.getMap();
-		
+
 		String[] list = Pages.getSiteList();
-		
+
 		if (ch1.isSelected()) {
 			Pages.addPage(_pageName, pageMap.get(list[0]));
 		}
@@ -85,7 +83,7 @@ public class LinkSelectionPageController implements Initializable {
 		if (ch10.isSelected()) {
 			Pages.addPage(_pageName, pageMap.get(list[9]));
 		}
-		
+
 		returnToAddLink(event);
 	}
 

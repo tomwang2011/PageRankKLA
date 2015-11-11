@@ -16,12 +16,15 @@ public class Page {
 	public Page(String name) {
 		_name = name;
 		_links = new HashSet<>();
+		_incomingLinks = new HashSet<>();
+	}
+	public Set<Page> getIncomingLinks() {
+		return _incomingLinks;
 	}
 
-	public void setLinks(Set<Page> _links) {
-		this._links = _links;
+	public void setIncomingLinks(Page page) {
+		_incomingLinks.add(page);
 	}
-
 	public void addLink(Page page) {
 		_links.add(page);
 	}
@@ -33,4 +36,5 @@ public class Page {
 	}
 	private String _name;
 	private Set<Page> _links;
+	private Set<Page> _incomingLinks;
 }

@@ -13,7 +13,7 @@ import java.util.Map;
  * @author tom
  */
 public class Pages {
-	
+
 	public Pages() {
 		_pages = new HashMap<>();
 
@@ -23,11 +23,11 @@ public class Pages {
 			_pages.put(site, page);
 		}
 	}
-	
+
 	public static void addPage(String siteName, Page linkPage) {
 		_pages.get(siteName).addLink(linkPage);
 	}
-	
+
 	public static void setMap(Map<String, Page> pages) {
 		_pages = pages;
 	}
@@ -35,11 +35,11 @@ public class Pages {
 	public static Map<String, Page> getMap() {
 		return _pages;
 	}
-	
+
 	public static String[] getSiteList() {
 		return siteList;
 	}
-	
+
 	private static String[] siteList = {"Apple", "Amazon", "Google", "Microsoft", "Facebook", "Adidas", "Nike", "Reebok", "Puma", "Newbalance"};
 	private static Map<String, Page> _pages;
 }

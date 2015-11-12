@@ -129,6 +129,23 @@ public class RankingDisplayController implements Initializable {
 				if(page.getIncomingLinks().size() > max.getIncomingLinks().size()) {
 					max = page;
 				}
+				else if(page.getIncomingLinks().size() == max.getIncomingLinks().size()) {
+					System.out.println("page is: " + page.getName());
+					System.out.println("max is: " + max.getName());
+					int pageTotal = 0;
+					for (Page incomingLink : page.getIncomingLinks()) {
+						pageTotal += incomingLink.getIncomingLinks().size();
+					}
+					int maxTotal = 0;
+					for (Page incomingLink : max.getIncomingLinks()) {
+						maxTotal += incomingLink.getIncomingLinks().size();
+					}
+					System.out.println("page total: " + pageTotal);
+					System.out.println("max total: " + maxTotal);
+					if (pageTotal > maxTotal) {
+						max = page;
+					}
+				}
 			}
 		}
 		addedSites.add(max);

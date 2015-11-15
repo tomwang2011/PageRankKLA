@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.net.*?>
@@ -8,17 +11,39 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" fx:id="addPageButton" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="pagerankdemofxml.MenuPageController">
+<AnchorPane id="AnchorPane" prefHeight="768.0" prefWidth="1024.0" styleClass="background" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pagerankdemofxml.MenuPageController">
 	<stylesheets>
 		<URL value="@menupage.css" />
 	</stylesheets>
    <children>
-      <Text layoutX="160.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PageRank KLA">
+      <Text layoutX="279.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PageRank KLA">
          <font>
-            <Font size="39.0" />
+            <Font size="72.0" />
          </font>
+         <effect>
+            <Glow level="0.65" />
+         </effect>
+         <fill>
+            <LinearGradient endX="0.6009615384615384" endY="0.6730769230769231" startX="0.6009615384615384" startY="0.3557692307692308">
+               <stops>
+                  <Stop color="#3e79b9" />
+                  <Stop color="#1a7255" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
       </Text>
-      <Button layoutX="260.0" layoutY="95.0" mnemonicParsing="false" onAction="#addPageButtonEvent" text="Add Page" />
-      <Button fx:id="viewRankingsButton" layoutX="27.0" layoutY="95.0" mnemonicParsing="false" onAction="#viewRankingsButtonEvent" text="View Rankings" />
+      <Button fx:id="addPageButton" layoutX="589.0" layoutY="182.0" mnemonicParsing="false" onAction="#addPageButtonEvent" text="Add Page">
+         <font>
+            <Font size="36.0" />
+         </font></Button>
+      <Button fx:id="viewRankingsButton" layoutX="223.0" layoutY="182.0" mnemonicParsing="false" onAction="#viewRankingsButtonEvent" text="View Rankings">
+         <font>
+            <Font size="36.0" />
+         </font></Button>
+      <ImageView fitHeight="288.0" fitWidth="419.0" layoutX="312.0" layoutY="338.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@PageRank-hi-res.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

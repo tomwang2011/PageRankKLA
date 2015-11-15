@@ -6,9 +6,7 @@
 package pagerankdemofxml;
 
 import java.net.URL;
-import java.util.Map;
 import java.util.ResourceBundle;
-import java.util.Set;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -222,6 +220,23 @@ public class AddLinkController implements Initializable {
 		String[] list = Pages.getSiteList();
 
 		controller.initData(list[9]);
+
+		controller.setPrevStage(_stage);
+
+		_stage.show();
+	}
+
+	@FXML
+	private void viewRankingsButtonEvent(ActionEvent event) throws Exception {
+		FXMLLoader display = new FXMLLoader(getClass().getResource("RankingDisplay.fxml"));
+
+		Scene scene = new Scene(display.load());
+
+		_stage.setScene(scene);
+
+		RankingDisplayController controller = display.getController();
+
+		controller.initData();
 
 		controller.setPrevStage(_stage);
 

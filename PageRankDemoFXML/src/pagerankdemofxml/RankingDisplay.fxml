@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.chart.*?>
 <?import java.lang.*?>
@@ -8,43 +10,180 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pagerankdemofxml.RankingDisplayController">
+<AnchorPane id="AnchorPane" prefHeight="768.0" prefWidth="1024.0" styleClass="background" stylesheets="@menupage.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pagerankdemofxml.RankingDisplayController">
    <children>
-      <Label fx:id="label" layoutX="247.0" layoutY="23.0" text="Current Ranking" />
-      <Label layoutX="256.0" layoutY="58.0" text="Site" />
-      <Label layoutX="423.0" layoutY="58.0" text="Number of Links" />
-      <Line endX="400.0" layoutX="221.0" layoutY="89.0" startX="-100.0" />
-      <Label fx:id="rank1" layoutX="250.0" layoutY="100" text="Label" />
-      <Label fx:id="rank2" layoutX="250.0" layoutY="125" text="Label" />
-      <Label fx:id="rank3" layoutX="250.0" layoutY="150" text="Label" />
-      <Label fx:id="rank4" layoutX="250.0" layoutY="175" text="Label" />
-      <Label fx:id="rank5" layoutX="250.0" layoutY="200" text="Label" />
-      <Label fx:id="rank6" layoutX="250.0" layoutY="225" text="Label" />
-      <Label fx:id="rank7" layoutX="250.0" layoutY="250" text="Label" />
-      <Label fx:id="rank8" layoutX="250.0" layoutY="275" text="Label" />
-      <Label fx:id="rank9" layoutX="250.0" layoutY="300" text="Label" />
-      <Label fx:id="rank10" layoutX="250.0" layoutY="325" text="Label" />
-      <Label layoutX="70.0" layoutY="58.0" text="Rank" />
-      <Label layoutX="69.0" layoutY="100" text="1" />
-      <Label layoutX="69.0" layoutY="125" text="2" />
-      <Label layoutX="69.0" layoutY="150" text="3" />
-      <Label layoutX="69.0" layoutY="175" text="4" />
-      <Label layoutX="69.0" layoutY="200" text="5" />
-      <Label layoutX="69.0" layoutY="225" text="6" />
-      <Label layoutX="69.0" layoutY="250" text="7" />
-      <Label layoutX="69.0" layoutY="275" text="8" />
-      <Label layoutX="69.0" layoutY="300" text="9" />
-      <Label layoutX="69.0" layoutY="325" text="10" />
-      <Button fx:id="menu" layoutX="540.0" layoutY="18.0" mnemonicParsing="false" onAction="#ReturnToMenu" text="Return to Menu" />
-      <Label fx:id="linknum1" layoutX="457.0" layoutY="100.0" text="Label" />
-      <Label fx:id="linknum2" layoutX="457.0" layoutY="125.0" text="Label" />
-      <Label fx:id="linknum3" layoutX="457.0" layoutY="150.0" text="Label" />
-      <Label fx:id="linknum4" layoutX="457.0" layoutY="175.0" text="Label" />
-      <Label fx:id="linknum5" layoutX="457.0" layoutY="200.0" text="Label" />
-      <Label fx:id="linknum6" layoutX="457.0" layoutY="225.0" text="Label" />
-      <Label fx:id="linknum7" layoutX="457.0" layoutY="250.0" text="Label" />
-      <Label fx:id="linknum8" layoutX="457.0" layoutY="275.0" text="Label" />
-      <Label fx:id="linknum9" layoutX="457.0" layoutY="300.0" text="Label" />
-      <Label fx:id="linknum10" layoutX="457.0" layoutY="325.0" text="Label" />
+      <Label fx:id="label" layoutX="82.0" layoutY="70.0" text="Current Ranking">
+         <font>
+            <Font size="72.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#1788b9" />
+                  <Stop color="#572323" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill></Label>
+      <Label layoutX="357.0" layoutY="183.0" text="Site">
+         <font>
+            <Font size="48.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#1788b9" />
+                  <Stop color="#3e2e46" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill></Label>
+      <Label layoutX="524.0" layoutY="183.0" text="Number of Links">
+         <font>
+            <Font size="48.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#1788b9" />
+                  <Stop color="#3e2e46" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill></Label>
+      <Line endX="400.0" layoutX="401.0" layoutY="252.0" startX="-200.0" />
+      <Label fx:id="rank1" layoutX="386.0" layoutY="253.0" text="Label">
+         <font>
+            <Font size="36.0" />
+         </font></Label>
+      <Label fx:id="rank2" layoutX="386.0" layoutY="296.0" text="Label">
+         <font>
+            <Font size="36.0" />
+         </font></Label>
+      <Label fx:id="rank3" layoutX="386.0" layoutY="340.0" text="Label">
+         <font>
+            <Font size="36.0" />
+         </font></Label>
+      <Label fx:id="rank4" layoutX="386.0" layoutY="384.0" text="Label">
+         <font>
+            <Font size="36.0" />
+         </font></Label>
+      <Label fx:id="rank5" layoutX="386.0" layoutY="426.0" text="Label">
+         <font>
+            <Font size="36.0" />
+         </font></Label>
+      <Label fx:id="rank6" layoutX="386.0" layoutY="470.0" text="Label">
+         <font>
+            <Font size="36.0" />
+         </font></Label>
+      <Label fx:id="rank7" layoutX="386.0" layoutY="514.0" text="Label">
+         <font>
+            <Font size="36.0" />
+         </font></Label>
+      <Label fx:id="rank8" layoutX="386.0" layoutY="558.0" text="Label">
+         <font>
+            <Font size="36.0" />
+         </font></Label>
+      <Label fx:id="rank9" layoutX="386.0" layoutY="602.0" text="Label">
+         <font>
+            <Font size="36.0" />
+         </font></Label>
+      <Label fx:id="rank10" layoutX="386.0" layoutY="646.0" text="Label">
+         <font>
+            <Font size="36.0" />
+         </font></Label>
+      <Label layoutX="171.0" layoutY="183.0" text="Rank">
+         <font>
+            <Font size="48.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#1788b9" />
+                  <Stop color="#3e2e46" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill></Label>
+      <Label layoutX="205.0" layoutY="253.0" text="1">
+         <font>
+            <Font size="36.0" />
+         </font></Label>
+      <Label layoutX="205.0" layoutY="296.0" text="2">
+         <font>
+            <Font size="36.0" />
+         </font></Label>
+      <Label layoutX="205.0" layoutY="340.0" text="3">
+         <font>
+            <Font size="36.0" />
+         </font></Label>
+      <Label layoutX="205.0" layoutY="384.0" text="4">
+         <font>
+            <Font size="36.0" />
+         </font></Label>
+      <Label layoutX="205.0" layoutY="426.0" text="5">
+         <font>
+            <Font size="36.0" />
+         </font></Label>
+      <Label layoutX="205.0" layoutY="470.0" text="6">
+         <font>
+            <Font size="36.0" />
+         </font></Label>
+      <Label layoutX="205.0" layoutY="514.0" text="7">
+         <font>
+            <Font size="36.0" />
+         </font></Label>
+      <Label layoutX="205.0" layoutY="558.0" text="8">
+         <font>
+            <Font size="36.0" />
+         </font></Label>
+      <Label layoutX="205.0" layoutY="602.0" text="9">
+         <font>
+            <Font size="36.0" />
+         </font></Label>
+      <Label layoutX="205.0" layoutY="646.0" text="10">
+         <font>
+            <Font size="36.0" />
+         </font></Label>
+      <Button fx:id="menu" layoutX="679.0" layoutY="81.0" mnemonicParsing="false" onAction="#ReturnToMenu" text="Return to Menu">
+         <font>
+            <Font size="36.0" />
+         </font></Button>
+      <Label fx:id="linknum1" layoutX="709.0" layoutY="252.0" text="Label">
+         <font>
+            <Font size="36.0" />
+         </font></Label>
+      <Label fx:id="linknum2" layoutX="709.0" layoutY="295.0" text="Label">
+         <font>
+            <Font size="36.0" />
+         </font></Label>
+      <Label fx:id="linknum3" layoutX="709.0" layoutY="339.0" text="Label">
+         <font>
+            <Font size="36.0" />
+         </font></Label>
+      <Label fx:id="linknum4" layoutX="709.0" layoutY="383.0" text="Label">
+         <font>
+            <Font size="36.0" />
+         </font></Label>
+      <Label fx:id="linknum5" layoutX="709.0" layoutY="425.0" text="Label">
+         <font>
+            <Font size="36.0" />
+         </font></Label>
+      <Label fx:id="linknum6" layoutX="709.0" layoutY="469.0" text="Label">
+         <font>
+            <Font size="36.0" />
+         </font></Label>
+      <Label fx:id="linknum7" layoutX="709.0" layoutY="513.0" text="Label">
+         <font>
+            <Font size="36.0" />
+         </font></Label>
+      <Label fx:id="linknum8" layoutX="709.0" layoutY="557.0" text="Label">
+         <font>
+            <Font size="36.0" />
+         </font></Label>
+      <Label fx:id="linknum9" layoutX="709.0" layoutY="601.0" text="Label">
+         <font>
+            <Font size="36.0" />
+         </font></Label>
+      <Label fx:id="linknum10" layoutX="709.0" layoutY="645.0" text="Label">
+         <font>
+            <Font size="36.0" />
+         </font></Label>
    </children>
 </AnchorPane>

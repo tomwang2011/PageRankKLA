@@ -7,7 +7,6 @@ package pagerankdemofxml;
 
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -46,7 +45,7 @@ public class RankingDisplayController implements Initializable {
 	public void initData() {
 		Map<String,Page> pages = Pages.getMap();
 
-		label.setText("Here are the rankings!");
+		label.setText("Current Ranking");
 		String[] rank = new String[10];
 		String[] num = new String[10];
 
@@ -130,8 +129,6 @@ public class RankingDisplayController implements Initializable {
 					max = page;
 				}
 				else if(page.getIncomingLinks().size() == max.getIncomingLinks().size()) {
-					System.out.println("page is: " + page.getName());
-					System.out.println("max is: " + max.getName());
 					int pageTotal = 0;
 					for (Page incomingLink : page.getIncomingLinks()) {
 						pageTotal += incomingLink.getIncomingLinks().size();
@@ -140,8 +137,7 @@ public class RankingDisplayController implements Initializable {
 					for (Page incomingLink : max.getIncomingLinks()) {
 						maxTotal += incomingLink.getIncomingLinks().size();
 					}
-					System.out.println("page total: " + pageTotal);
-					System.out.println("max total: " + maxTotal);
+
 					if (pageTotal > maxTotal) {
 						max = page;
 					}

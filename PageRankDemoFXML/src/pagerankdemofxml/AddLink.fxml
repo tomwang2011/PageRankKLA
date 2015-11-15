@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.text.*?>
 <?import java.lang.*?>
@@ -8,19 +10,67 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pagerankdemofxml.AddLinkController">
+<AnchorPane id="AnchorPane" onMouseClicked="#viewRankingsButtonEvent" prefHeight="768.0" prefWidth="1024.0" styleClass="background" stylesheets="@menupage.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pagerankdemofxml.AddLinkController">
    <children>
-      <Text layoutX="44.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Site" />
-      <Button fx:id="applebtn" layoutX="14.0" layoutY="61.0" maxHeight="50.0" maxWidth="100.0" minHeight="50.0" minWidth="100.0" mnemonicParsing="false" onAction="#AddLinkTo0" prefHeight="50.0" prefWidth="100.0" text="Apple" />
-      <Button fx:id="adidasbtn" layoutX="14.0" layoutY="123.0" maxHeight="50.0" maxWidth="100.0" minHeight="50.0" minWidth="100.0" mnemonicParsing="false" onAction="#AddLinkTo5" prefHeight="50.0" prefWidth="100.0" text="Adidas" />
-      <Button fx:id="reebokbtn" layoutX="239.0" layoutY="123.0" maxHeight="50.0" maxWidth="100.0" minHeight="50.0" minWidth="100.0" mnemonicParsing="false" onAction="#AddLinkTo7" prefHeight="50.0" prefWidth="100.0" text="Reebok" />
-      <Button fx:id="amazonbtn" layoutX="124.0" layoutY="61.0" maxHeight="50.0" maxWidth="100.0" minHeight="50.0" minWidth="100.0" mnemonicParsing="false" onAction="#AddLinkTo1" prefHeight="50.0" prefWidth="100.0" text="Amazon" />
-      <Button fx:id="nikebtn" layoutX="124.0" layoutY="123.0" maxHeight="50.0" maxWidth="100.0" minHeight="50.0" minWidth="100.0" mnemonicParsing="false" onAction="#AddLinkTo6" prefHeight="50.0" prefWidth="100.0" text="Nike" />
-      <Button fx:id="googlebtn" layoutX="239.0" layoutY="61.0" maxHeight="50.0" maxWidth="100.0" minHeight="50.0" minWidth="100.0" mnemonicParsing="false" onAction="#AddLinkTo2" prefHeight="50.0" prefWidth="100.0" text="Google" />
-      <Button fx:id="msbtn" layoutX="349.0" layoutY="61.0" maxHeight="50.0" maxWidth="100.0" minHeight="50.0" minWidth="100.0" mnemonicParsing="false" onAction="#AddLinkTo3" prefHeight="50.0" prefWidth="100.0" text="Microsoft" />
-      <Button fx:id="fbbtn" layoutX="458.0" layoutY="61.0" maxHeight="50.0" maxWidth="100.0" minHeight="50.0" minWidth="100.0" mnemonicParsing="false" onAction="#AddLinkTo4" prefHeight="50.0" prefWidth="100.0" text="Facebook" />
-      <Button fx:id="nbbtn" layoutX="458.0" layoutY="123.0" maxHeight="50.0" maxWidth="100.0" minHeight="50.0" minWidth="100.0" mnemonicParsing="false" onAction="#AddLinkTo9" prefHeight="50.0" prefWidth="100.0" text="NewBalance" />
-      <Button fx:id="pumabtn" layoutX="349.0" layoutY="123.0" maxHeight="50.0" maxWidth="100.0" minHeight="50.0" minWidth="100.0" mnemonicParsing="false" onAction="#AddLinkTo8" prefHeight="50.0" prefWidth="100.0" text="Puma" />
-      <Button fx:id="MenuButton" layoutX="455.0" layoutY="15.0" mnemonicParsing="false" onAction="#ReturnToMenu" text="Back to Menu" />
+      <Text layoutX="330.0" layoutY="201.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Site">
+         <effect>
+            <Glow />
+         </effect>
+         <font>
+            <Font size="72.0" />
+         </font>
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#837b40" />
+                  <Stop color="#4056c6ba" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill></Text>
+      <Button fx:id="applebtn" layoutX="242.0" layoutY="286.0" maxHeight="50.0" maxWidth="100.0" minHeight="50.0" minWidth="100.0" mnemonicParsing="false" onAction="#AddLinkTo0" prefHeight="50.0" prefWidth="100.0" text="Apple">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+      <Button fx:id="adidasbtn" layoutX="242.0" layoutY="363.0" maxHeight="50.0" maxWidth="100.0" minHeight="50.0" minWidth="100.0" mnemonicParsing="false" onAction="#AddLinkTo5" prefHeight="50.0" prefWidth="100.0" text="Adidas">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <Button fx:id="reebokbtn" layoutX="465.0" layoutY="363.0" maxHeight="50.0" maxWidth="100.0" minHeight="50.0" minWidth="100.0" mnemonicParsing="false" onAction="#AddLinkTo7" prefHeight="50.0" prefWidth="100.0" text="Reebok">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <Button fx:id="amazonbtn" layoutX="354.0" layoutY="286.0" maxHeight="50.0" maxWidth="100.0" minHeight="50.0" minWidth="100.0" mnemonicParsing="false" onAction="#AddLinkTo1" prefHeight="50.0" prefWidth="100.0" text="Amazon">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <Button fx:id="nikebtn" layoutX="354.0" layoutY="363.0" maxHeight="50.0" maxWidth="100.0" minHeight="50.0" minWidth="100.0" mnemonicParsing="false" onAction="#AddLinkTo6" prefHeight="50.0" prefWidth="100.0" text="Nike">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <Button fx:id="googlebtn" layoutX="465.0" layoutY="286.0" maxHeight="50.0" maxWidth="100.0" minHeight="50.0" minWidth="100.0" mnemonicParsing="false" onAction="#AddLinkTo2" prefHeight="50.0" prefWidth="100.0" text="Google">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <Button fx:id="msbtn" layoutX="573.0" layoutY="286.0" maxHeight="50.0" maxWidth="100.0" minHeight="50.0" minWidth="100.0" mnemonicParsing="false" onAction="#AddLinkTo3" prefHeight="50.0" prefWidth="100.0" text="Microsoft">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Button fx:id="fbbtn" layoutX="681.0" layoutY="286.0" maxHeight="50.0" maxWidth="100.0" minHeight="50.0" minWidth="100.0" mnemonicParsing="false" onAction="#AddLinkTo4" prefHeight="50.0" prefWidth="100.0" text="Facebook">
+         <font>
+            <Font size="16.0" />
+         </font></Button>
+      <Button fx:id="nbbtn" layoutX="681.0" layoutY="363.0" maxHeight="50.0" maxWidth="100.0" minHeight="50.0" minWidth="100.0" mnemonicParsing="false" onAction="#AddLinkTo9" prefHeight="50.0" prefWidth="100.0" text="NewBalance" />
+      <Button fx:id="pumabtn" layoutX="573.0" layoutY="363.0" maxHeight="50.0" maxWidth="100.0" minHeight="50.0" minWidth="100.0" mnemonicParsing="false" onAction="#AddLinkTo8" prefHeight="50.0" prefWidth="100.0" text="Puma">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <Button fx:id="MenuButton" layoutX="595.0" layoutY="571.0" mnemonicParsing="false" onAction="#ReturnToMenu" text="Back to Menu">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+      <Button layoutX="243.0" layoutY="571.0" mnemonicParsing="false" onAction="#viewRankingsButtonEvent" text="View Current Rankings">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
    </children>
 </AnchorPane>

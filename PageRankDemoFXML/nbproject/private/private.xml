@@ -5,12 +5,16 @@
         <group>
             <file>file:/Users/tom/Projects/PageRankKLA/PageRankDemoFXML/src/pagerankdemofxml/AddLinkController.java</file>
             <file>file:/Users/tom/Projects/PageRankKLA/PageRankDemoFXML/src/pagerankdemofxml/LinkSelectionPageController.java</file>
+            <file>file:/Users/tom/Projects/PageRankKLA/PageRankDemoFXML/src/pagerankdemofxml/AddLink.fxml</file>
             <file>file:/Users/tom/Projects/PageRankKLA/PageRankDemoFXML/src/pagerankdemofxml/Pages.java</file>
+            <file>file:/Users/tom/Projects/PageRankKLA/PageRankDemoFXML/src/pagerankdemofxml/menupage.css</file>
             <file>file:/Users/tom/Projects/PageRankKLA/PageRankDemoFXML/src/pagerankdemofxml/MenuPageController.java</file>
             <file>file:/Users/tom/Projects/PageRankKLA/PageRankDemoFXML/src/pagerankdemofxml/Page.java</file>
             <file>file:/Users/tom/Projects/PageRankKLA/PageRankDemoFXML/src/pagerankdemofxml/PageRankDemoFXML.java</file>
-            <file>file:/Users/tom/Projects/PageRankKLA/PageRankDemoFXML/src/pagerankdemofxml/FXMLDocumentController.java</file>
+            <file>file:/Users/tom/Projects/PageRankKLA/PageRankDemoFXML/src/pagerankdemofxml/MenuPage.fxml</file>
+            <file>file:/Users/tom/Projects/PageRankKLA/PageRankDemoFXML/src/pagerankdemofxml/RankingDisplay.fxml</file>
             <file>file:/Users/tom/Projects/PageRankKLA/PageRankDemoFXML/src/pagerankdemofxml/RankingDisplayController.java</file>
+            <file>file:/Users/tom/Projects/PageRankKLA/PageRankDemoFXML/src/pagerankdemofxml/LinkSelectionPage.fxml</file>
         </group>
     </open-files>
 </project-private>

@@ -46,6 +46,7 @@ public class RankingDisplayController implements Initializable {
 		Map<String,Page> pages = Pages.getMap();
 
 		label.setText("Current Ranking");
+
 		String[] rank = new String[10];
 		String[] num = new String[10];
 
@@ -148,13 +149,15 @@ public class RankingDisplayController implements Initializable {
 
 		return max;
 	}
+
 	public void setPrevStage(Stage stage) {
 		this._stage = stage;
 	}
 
 	@FXML
 	private void ReturnToMenu(ActionEvent event) throws Exception {
-		FXMLLoader display = new FXMLLoader(getClass().getResource("MenuPage.fxml"));
+		FXMLLoader display = new FXMLLoader(getClass().getResource(
+			"MenuPage.fxml"));
 
 		Scene scene = new Scene(display.load());
 

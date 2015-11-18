@@ -18,6 +18,7 @@ public class Page {
 		_links = new HashSet<>();
 		_incomingLinks = new HashSet<>();
 	}
+
 	public Set<Page> getIncomingLinks() {
 		return _incomingLinks;
 	}
@@ -25,15 +26,19 @@ public class Page {
 	public void setIncomingLinks(Page page) {
 		_incomingLinks.add(page);
 	}
+
 	public void addLink(Page page) {
 		_links.add(page);
 	}
+
 	public Set<Page> getLinks() {
 		return _links;
 	}
+
 	public String getName() {
 		return _name;
 	}
+
 	private String _name;
 	private Set<Page> _links;
 	private Set<Page> _incomingLinks;

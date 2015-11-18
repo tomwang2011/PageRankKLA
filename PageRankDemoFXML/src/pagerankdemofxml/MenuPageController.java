@@ -23,15 +23,14 @@ public class MenuPageController implements Initializable {
 
 	@FXML
 	private void addPageButtonEvent(ActionEvent event) throws Exception {
-		FXMLLoader display = new FXMLLoader(getClass().getResource("AddLink.fxml"));
+		FXMLLoader display = new FXMLLoader(getClass().getResource(
+			"AddLink.fxml"));
 
 		Scene scene = new Scene(display.load());
 
 		_stage.setScene(scene);
 
 		AddLinkController controller = display.getController();
-
-		controller.initData();
 
 		controller.setPrevStage(_stage);
 
@@ -40,7 +39,8 @@ public class MenuPageController implements Initializable {
 
 	@FXML
 	private void viewRankingsButtonEvent(ActionEvent event) throws Exception {
-		FXMLLoader display = new FXMLLoader(getClass().getResource("RankingDisplay.fxml"));
+		FXMLLoader display = new FXMLLoader(getClass().getResource(
+			"RankingDisplay.fxml"));
 
 		Scene scene = new Scene(display.load());
 

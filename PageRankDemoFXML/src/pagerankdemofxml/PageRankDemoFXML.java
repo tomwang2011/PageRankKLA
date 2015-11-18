@@ -18,7 +18,8 @@ public class PageRankDemoFXML extends Application {
 
 	@Override
 	public void start(Stage stage) throws Exception {
-		FXMLLoader display = new FXMLLoader(getClass().getResource("MenuPage.fxml"));
+		FXMLLoader display = new FXMLLoader(getClass().getResource(
+			"MenuPage.fxml"));
 
 		Scene scene = new Scene(display.load());
 

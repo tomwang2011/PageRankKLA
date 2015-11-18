@@ -34,11 +34,8 @@ public class LinkSelectionPageController implements Initializable {
 	@FXML
 	private CheckBox ch1,ch2,ch3,ch4,ch5,ch6,ch7,ch8,ch9,ch10;
 
-
-
 	@Override
 	public void initialize(URL url, ResourceBundle rb) {
-		// TODO
 	}
 
 	public void initData(String pageName) {
@@ -96,7 +93,8 @@ public class LinkSelectionPageController implements Initializable {
 
 	@FXML
 	private void returnToAddLink(ActionEvent event) throws Exception {
-		FXMLLoader display = new FXMLLoader(getClass().getResource("AddLink.fxml"));
+		FXMLLoader display = new FXMLLoader(getClass().getResource(
+			"AddLink.fxml"));
 
 		Scene scene = new Scene(display.load());
 
@@ -104,15 +102,14 @@ public class LinkSelectionPageController implements Initializable {
 
 		AddLinkController controller = display.getController();
 
-		controller.initData();
-
 		controller.setPrevStage(_stage);
 
 		_stage.show();
 	}
 	@FXML
 	private void ReturnToMenu(ActionEvent event) throws Exception {
-		FXMLLoader display = new FXMLLoader(getClass().getResource("MenuPage.fxml"));
+		FXMLLoader display = new FXMLLoader(getClass().getResource(
+			"MenuPage.fxml"));
 
 		Scene scene = new Scene(display.load());
 

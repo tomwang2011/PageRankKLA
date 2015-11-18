@@ -29,7 +29,7 @@
          </fill></Text>
       <Button fx:id="applebtn" layoutX="242.0" layoutY="286.0" maxHeight="50.0" maxWidth="100.0" minHeight="50.0" minWidth="100.0" mnemonicParsing="false" onAction="#AddLinkTo0" prefHeight="50.0" prefWidth="100.0" text="Apple">
          <font>
-            <Font size="24.0" />
+            <Font size="17.0" />
          </font></Button>
       <Button fx:id="adidasbtn" layoutX="242.0" layoutY="363.0" maxHeight="50.0" maxWidth="100.0" minHeight="50.0" minWidth="100.0" mnemonicParsing="false" onAction="#AddLinkTo5" prefHeight="50.0" prefWidth="100.0" text="Adidas">
          <font>

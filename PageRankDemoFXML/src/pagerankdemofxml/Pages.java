@@ -40,6 +40,8 @@ public class Pages {
 		return siteList;
 	}
 
-	private static String[] siteList = {"Apple", "Amazon", "Google", "Microsoft", "Facebook", "Adidas", "Nike", "Reebok", "Puma", "Newbalance"};
+	private static String[] siteList =
+	{"Apple", "Amazon", "Google", "Microsoft", "Facebook", "Adidas", "Nike", "Reebok", "Puma", "Newbalance"};
+
 	private static Map<String, Page> _pages;
 }

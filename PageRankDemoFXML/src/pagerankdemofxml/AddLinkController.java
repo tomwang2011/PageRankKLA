@@ -26,19 +26,14 @@ public class AddLinkController implements Initializable {
 	 * Initializes the controller class.
 	 */
 
-	@FXML
-	private Button applebtn;
-
 	@Override
 	public void initialize(URL url, ResourceBundle rb) {
 	}
 
-	public void initData() {
-	}
-
 	@FXML
 	private void AddLinkTo0(ActionEvent event) throws Exception {
-		FXMLLoader display = new FXMLLoader(getClass().getResource("LinkSelectionPage.fxml"));
+		FXMLLoader display = new FXMLLoader(getClass().getResource(
+			"LinkSelectionPage.fxml"));
 
 		Scene scene = new Scene(display.load());
 
@@ -57,7 +52,8 @@ public class AddLinkController implements Initializable {
 
 	@FXML
 	private void AddLinkTo1(ActionEvent event) throws Exception {
-		FXMLLoader display = new FXMLLoader(getClass().getResource("LinkSelectionPage.fxml"));
+		FXMLLoader display = new FXMLLoader(getClass().getResource(
+			"LinkSelectionPage.fxml"));
 
 		Scene scene = new Scene(display.load());
 
@@ -76,7 +72,8 @@ public class AddLinkController implements Initializable {
 
 	@FXML
 	private void AddLinkTo2(ActionEvent event) throws Exception {
-		FXMLLoader display = new FXMLLoader(getClass().getResource("LinkSelectionPage.fxml"));
+		FXMLLoader display = new FXMLLoader(getClass().getResource(
+			"LinkSelectionPage.fxml"));
 
 		Scene scene = new Scene(display.load());
 
@@ -95,7 +92,8 @@ public class AddLinkController implements Initializable {
 
 	@FXML
 	private void AddLinkTo3(ActionEvent event) throws Exception {
-		FXMLLoader display = new FXMLLoader(getClass().getResource("LinkSelectionPage.fxml"));
+		FXMLLoader display = new FXMLLoader(getClass().getResource(
+			"LinkSelectionPage.fxml"));
 
 		Scene scene = new Scene(display.load());
 
@@ -114,7 +112,8 @@ public class AddLinkController implements Initializable {
 
 	@FXML
 	private void AddLinkTo4(ActionEvent event) throws Exception {
-		FXMLLoader display = new FXMLLoader(getClass().getResource("LinkSelectionPage.fxml"));
+		FXMLLoader display = new FXMLLoader(getClass().getResource(
+			"LinkSelectionPage.fxml"));
 
 		Scene scene = new Scene(display.load());
 
@@ -133,7 +132,8 @@ public class AddLinkController implements Initializable {
 
 	@FXML
 	private void AddLinkTo5(ActionEvent event) throws Exception {
-		FXMLLoader display = new FXMLLoader(getClass().getResource("LinkSelectionPage.fxml"));
+		FXMLLoader display = new FXMLLoader(getClass().getResource(
+			"LinkSelectionPage.fxml"));
 
 		Scene scene = new Scene(display.load());
 
@@ -152,7 +152,8 @@ public class AddLinkController implements Initializable {
 
 	@FXML
 	private void AddLinkTo6(ActionEvent event) throws Exception {
-		FXMLLoader display = new FXMLLoader(getClass().getResource("LinkSelectionPage.fxml"));
+		FXMLLoader display = new FXMLLoader(getClass().getResource(
+			"LinkSelectionPage.fxml"));
 
 		Scene scene = new Scene(display.load());
 
@@ -171,7 +172,8 @@ public class AddLinkController implements Initializable {
 
 	@FXML
 	private void AddLinkTo7(ActionEvent event) throws Exception {
-		FXMLLoader display = new FXMLLoader(getClass().getResource("LinkSelectionPage.fxml"));
+		FXMLLoader display = new FXMLLoader(getClass().getResource(
+			"LinkSelectionPage.fxml"));
 
 		Scene scene = new Scene(display.load());
 
@@ -190,7 +192,8 @@ public class AddLinkController implements Initializable {
 
 	@FXML
 	private void AddLinkTo8(ActionEvent event) throws Exception {
-		FXMLLoader display = new FXMLLoader(getClass().getResource("LinkSelectionPage.fxml"));
+		FXMLLoader display = new FXMLLoader(getClass().getResource(
+			"LinkSelectionPage.fxml"));
 
 		Scene scene = new Scene(display.load());
 
@@ -209,7 +212,8 @@ public class AddLinkController implements Initializable {
 
 	@FXML
 	private void AddLinkTo9(ActionEvent event) throws Exception {
-		FXMLLoader display = new FXMLLoader(getClass().getResource("LinkSelectionPage.fxml"));
+		FXMLLoader display = new FXMLLoader(getClass().getResource(
+			"LinkSelectionPage.fxml"));
 
 		Scene scene = new Scene(display.load());
 
@@ -228,7 +232,8 @@ public class AddLinkController implements Initializable {
 
 	@FXML
 	private void viewRankingsButtonEvent(ActionEvent event) throws Exception {
-		FXMLLoader display = new FXMLLoader(getClass().getResource("RankingDisplay.fxml"));
+		FXMLLoader display = new FXMLLoader(getClass().getResource(
+			"RankingDisplay.fxml"));
 
 		Scene scene = new Scene(display.load());
 
@@ -245,7 +250,8 @@ public class AddLinkController implements Initializable {
 
 	@FXML
 	private void ReturnToMenu(ActionEvent event) throws Exception {
-		FXMLLoader display = new FXMLLoader(getClass().getResource("MenuPage.fxml"));
+		FXMLLoader display = new FXMLLoader(getClass().getResource(
+			"MenuPage.fxml"));
 
 		Scene scene = new Scene(display.load());
 
@@ -258,7 +264,6 @@ public class AddLinkController implements Initializable {
 		_stage.show();
 	}
 
-	Pages _pages;
 	Stage _stage;
 
 	public void setPrevStage(Stage stage) {
